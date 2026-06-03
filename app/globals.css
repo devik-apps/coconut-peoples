@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #09090b;
-  --layout-max-width: 1400px;
+  --layout-max-width: 1200px;
   --layout-gutter: clamp(1rem, 5vw, 4rem);
 }
 
