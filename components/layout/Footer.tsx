@@ -11,7 +11,7 @@ export function Footer() {
               Coconut People
             </Link>
             <p className="max-w-xs text-sm leading-relaxed text-zinc-500">
-              Une agence créative dédiée à l'excellence et à l'innovation dans chaque projet que nous entreprenons.
+              Une agence créative dédiée à l&apos;excellence et à l&apos;innovation dans chaque projet que nous entreprenons.
             </p>
           </div>
           <div className="space-y-6">
