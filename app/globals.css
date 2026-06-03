@@ -2,34 +2,29 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --layout-max-width: 1120px;
-  --layout-gutter: clamp(1rem, 4vw, 2rem);
+  --foreground: #09090b;
+  --layout-max-width: 1400px;
+  --layout-gutter: clamp(1rem, 5vw, 4rem);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-montserrat);
+  --font-serif: var(--font-cormorant);
+  
+  --spacing-section: clamp(6rem, 12vw, 10rem);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-body > * {
-  width: min(100%, var(--layout-max-width));
-  margin-inline: auto;
-  padding-inline: var(--layout-gutter);
-  box-sizing: border-box;
+/* Base layout utility */
+.section-padding {
+  padding-top: var(--spacing-section);
+  padding-bottom: var(--spacing-section);
 }

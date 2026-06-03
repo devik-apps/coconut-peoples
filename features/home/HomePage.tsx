@@ -1,12 +1,27 @@
-import { Container } from "@/components/layout/Container";
-import { HeroSection } from "./components/HeroSection";
+import { 
+  HeroSection,
+  AboutSection, 
+  FeaturesSection, 
+  ProcessSection, 
+  PortfolioSection, 
+  TestimonialsSection, 
+  FaqSection, 
+  NewsSection, 
+  CtaSection 
+} from "./components";
 
 export function HomePage() {
   return (
-    <main className="flex min-h-dvh items-center bg-zinc-50 py-20 dark:bg-black">
-      <Container>
-        <HeroSection />
-      </Container>
-    </main>
+    <div className="flex flex-col">
+      <HeroSection />
+      <AboutSection />
+      <FeaturesSection />
+      <ProcessSection />
+      <PortfolioSection />
+      <TestimonialsSection />
+      <FaqSection />
+      <NewsSection />
+      <CtaSection />
+    </div>
   );
 }
