@@ -5,7 +5,6 @@ export * from "./ProcessSection";
 export * from "./PortfolioSection";
 export * from "./TestimonialsSection";
 export * from "./CurvedCarousel";
-export * from "./FaqSection";
 export * from "./WhyChooseUsSection";
 export * from "./NewsSection";
 export * from "./CtaSection";
