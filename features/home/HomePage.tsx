@@ -6,7 +6,6 @@ import {
   ProcessSection,
   PortfolioSection,
   TestimonialsSection,
-  FaqSection,
   WhyChooseUsSection,
   NewsSection,
   CtaSection,
