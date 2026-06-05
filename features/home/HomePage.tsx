@@ -7,6 +7,7 @@ import {
   PortfolioSection,
   TestimonialsSection,
   FaqSection,
+  WhyChooseUsSection,
   NewsSection,
   CtaSection,
 } from "./components";
@@ -21,7 +22,7 @@ export function HomePage() {
       <ProcessSection />
       <PortfolioSection />
       <TestimonialsSection />
-      <FaqSection />
+      <WhyChooseUsSection />
       <NewsSection />
       <CtaSection />
     </div>
