@@ -1,4 +1,4 @@
-import type { ApproachData, HomeHero, NewsData } from "./types";
+import type { ApproachData, HomeHero, NewsData, WhyChooseUsData } from "./types";
 
 export const homeHero: HomeHero = {
   eyebrow: "Feature based website",
@@ -72,84 +72,125 @@ export const homeApproach: ApproachData = {
   ],
 };
 
+export const homeWhyChooseUs: WhyChooseUsData = {
+  reasons: [
+    {
+      number: "01",
+      title: "Une île, une identité",
+      description:
+        "Chaque produit puise son inspiration dans les paysages et les traditions de Madagascar, pour une authenticité qui se ressent dans chaque détail.",
+    },
+    {
+      number: "02",
+      title: "L'excellence artisanale",
+      description:
+        "Nos artisans perpétuent des savoir-faire ancestraux avec des techniques modernes, pour une qualité qui dépasse toutes les attentes.",
+    },
+    {
+      number: "03",
+      title: "Un engagement total",
+      description:
+        "Du champ à votre table, chaque étape est pensée pour respecter l'environnement et valoriser le travail de nos partenaires locaux.",
+    },
+    {
+      number: "04",
+      title: "L'innovation durable",
+      description:
+        "Nous investissons dans la recherche de solutions écologiques qui transforment l'industrie tout en préservant notre planète.",
+    },
+  ],
+};
+
 export const homeNews: NewsData = {
   title: "Vivre l'expérience Coconut People",
   items: [
     {
       id: "1",
-      image: "https://images.unsplash.com/photo-1590005354167-6da97870c757?q=80&w=800&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1590005354167-6da97870c757?q=80&w=800&auto=format&fit=crop",
       title: "Récolte matinale à Tamatave",
       date: "12 Mai 2026",
       category: { label: "COCO FOOD", color: "bg-coco-caramel" },
     },
     {
       id: "2",
-      image: "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=800&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=800&auto=format&fit=crop",
       title: "Artisanat d'exception",
       category: { label: "COCO ECO", color: "bg-coco-green" },
     },
     {
       id: "3",
-      image: "https://images.unsplash.com/photo-1512152272829-e3139592d56f?q=80&w=800&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1512152272829-e3139592d56f?q=80&w=800&auto=format&fit=crop",
       title: "Lifestyle Tropical",
       date: "08 Juin 2026",
       category: { label: "COCO LIFE", color: "bg-coco-sun" },
     },
     {
       id: "4",
-      image: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?q=80&w=800&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1488459716781-31db52582fe9?q=80&w=800&auto=format&fit=crop",
       title: "Pâtes à tartiner",
       category: { label: "COCO FOOD", color: "bg-coco-caramel" },
     },
     {
       id: "5",
-      image: "https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=800&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=800&auto=format&fit=crop",
       title: "Design Durable",
       date: "20 Avril 2026",
       category: { label: "COCO ECO", color: "bg-coco-green" },
     },
     {
       id: "6",
-      image: "https://images.unsplash.com/photo-1511144085314-da949c1100c9?q=80&w=800&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1511144085314-da949c1100c9?q=80&w=800&auto=format&fit=crop",
       title: "Plages de Madagascar",
       category: { label: "COCO LIFE", color: "bg-coco-sun" },
     },
     {
       id: "7",
-      image: "https://images.unsplash.com/photo-1493106819501-66d381c446a5?q=80&w=800&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1493106819501-66d381c446a5?q=80&w=800&auto=format&fit=crop",
       title: "Noix de coco fraîche",
       date: "15 Mars 2026",
       category: { label: "COCO FOOD", color: "bg-coco-caramel" },
     },
     {
       id: "8",
-      image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=800&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=800&auto=format&fit=crop",
       title: "Atelier de création",
       category: { label: "COCO ECO", color: "bg-coco-green" },
     },
     {
       id: "9",
-      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=800&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=800&auto=format&fit=crop",
       title: "Sourire Malgache",
       date: "02 Février 2026",
       category: { label: "COCO LIFE", color: "bg-coco-sun" },
     },
     {
       id: "10",
-      image: "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?q=80&w=800&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?q=80&w=800&auto=format&fit=crop",
       title: "Huile de coco vierge",
       category: { label: "COCO FOOD", color: "bg-coco-caramel" },
     },
     {
       id: "11",
-      image: "https://images.unsplash.com/photo-1505933332468-31b5a10ad636?q=80&w=800&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1505933332468-31b5a10ad636?q=80&w=800&auto=format&fit=crop",
       title: "Texture Coco",
       date: "10 Janvier 2026",
       category: { label: "COCO ECO", color: "bg-coco-green" },
     },
     {
       id: "12",
-      image: "https://images.unsplash.com/photo-1534612829471-aa3570624d73?q=80&w=800&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1534612829471-aa3570624d73?q=80&w=800&auto=format&fit=crop",
       title: "Évasion Tropicale",
       category: { label: "COCO LIFE", color: "bg-coco-sun" },
     },

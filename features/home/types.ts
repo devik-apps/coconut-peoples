@@ -32,6 +32,16 @@ export type ApproachData = {
   items: ApproachItem[];
 };
 
+export type WhyChooseUsReason = {
+  number: string;
+  title: string;
+  description: string;
+};
+
+export type WhyChooseUsData = {
+  reasons: WhyChooseUsReason[];
+};
+
 export type NewsItem = {
   id: string;
   image: string;

@@ -1,13 +1,13 @@
-import { 
+import {
   HeroSection,
-  AboutSection, 
-  FeaturesSection, 
-  ProcessSection, 
-  PortfolioSection, 
-  TestimonialsSection, 
-  FaqSection, 
-  NewsSection, 
-  CtaSection 
+  AboutSection,
+  FeaturesSection,
+  ProcessSection,
+  PortfolioSection,
+  TestimonialsSection,
+  WhyChooseUsSection,
+  NewsSection,
+  CtaSection,
 } from "./components";
 
 export function HomePage() {
@@ -19,7 +19,7 @@ export function HomePage() {
       <ProcessSection />
       <PortfolioSection />
       <TestimonialsSection />
-      <FaqSection />
+      <WhyChooseUsSection />
       <NewsSection />
       <CtaSection />
     </div>
