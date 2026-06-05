@@ -1,13 +1,14 @@
-import { 
+import {
   HeroSection,
-  AboutSection, 
-  FeaturesSection, 
-  ProcessSection, 
-  PortfolioSection, 
-  TestimonialsSection, 
-  FaqSection, 
-  NewsSection, 
-  CtaSection 
+  CurvedCarousel,
+  AboutSection,
+  FeaturesSection,
+  ProcessSection,
+  PortfolioSection,
+  TestimonialsSection,
+  FaqSection,
+  NewsSection,
+  CtaSection,
 } from "./components";
 
 export function HomePage() {
@@ -15,6 +16,7 @@ export function HomePage() {
     <div className="flex flex-col">
       <HeroSection />
       <AboutSection />
+      <CurvedCarousel />
       <FeaturesSection />
       <ProcessSection />
       <PortfolioSection />
