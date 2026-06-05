@@ -1,6 +1,6 @@
 export * from "./HeroSection";
 export * from "./AboutSection";
-export * from "./FeaturesSection";
+export * from "./CollectionSection";
 export * from "./ProcessSection";
 export * from "./PortfolioSection";
 export * from "./TestimonialsSection";

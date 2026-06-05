@@ -2,7 +2,7 @@ import {
   HeroSection,
   CurvedCarousel,
   AboutSection,
-  FeaturesSection,
+  CollectionSection,
   ProcessSection,
   PortfolioSection,
   TestimonialsSection,
@@ -17,10 +17,7 @@ export function HomePage() {
       <HeroSection />
       <AboutSection />
       <CurvedCarousel />
-      <FeaturesSection />
-      <ProcessSection />
-      <PortfolioSection />
-      <TestimonialsSection />
+      <CollectionSection />
       <WhyChooseUsSection />
       <NewsSection />
       <CtaSection />
