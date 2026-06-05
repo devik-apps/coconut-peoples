@@ -13,18 +13,18 @@
   --font-sans: var(--font-montserrat);
   --font-serif: var(--font-cormorant);
   --font-architects: var(--font-architects);
-  
+
   --spacing-section: clamp(6rem, 12vw, 10rem);
 
   /* Brand Colors */
-  --color-coco-beige: #F3EDE2;
-  --color-wet-sand: #D9C5B2;
-  --color-coco-caramel: #C68E44;
-  --color-coco-cream: #FDFBF7;
-  --color-coco-green: #4A5D4E;
-  --color-coco-earth: #5D4037;
-  --color-coco-sand: #E5D3B3;
-  --color-coco-sun: #F4A460;
+  --color-coco-beige: #f3ede2;
+  --color-wet-sand: #ffff;
+  --color-coco-caramel: #c68e44;
+  --color-coco-cream: #fdfbf7;
+  --color-coco-green: #4a5d4e;
+  --color-coco-earth: #5d4037;
+  --color-coco-sand: #e5d3b3;
+  --color-coco-sun: #f4a460;
 }
 
 body {
