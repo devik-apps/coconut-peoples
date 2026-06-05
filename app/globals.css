@@ -12,8 +12,19 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-montserrat);
   --font-serif: var(--font-cormorant);
+  --font-architects: var(--font-architects);
   
   --spacing-section: clamp(6rem, 12vw, 10rem);
+
+  /* Brand Colors */
+  --color-coco-beige: #F3EDE2;
+  --color-wet-sand: #D9C5B2;
+  --color-coco-caramel: #C68E44;
+  --color-coco-cream: #FDFBF7;
+  --color-coco-green: #4A5D4E;
+  --color-coco-earth: #5D4037;
+  --color-coco-sand: #E5D3B3;
+  --color-coco-sun: #F4A460;
 }
 
 body {

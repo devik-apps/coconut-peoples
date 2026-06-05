@@ -9,10 +9,10 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-
+bun.lock
 # testing
 /coverage
-
+template
 # next.js
 /.next/
 /out/
@@ -43,3 +43,6 @@ next-env.d.ts
 
 #
 *.pdf
+
+CLAUDE.md 
+AGENTS.md
