@@ -1,10 +1,12 @@
 import {
   HeroSection,
+  CurvedCarousel,
   AboutSection,
   FeaturesSection,
   ProcessSection,
   PortfolioSection,
   TestimonialsSection,
+  FaqSection,
   WhyChooseUsSection,
   NewsSection,
   CtaSection,
@@ -15,6 +17,7 @@ export function HomePage() {
     <div className="flex flex-col">
       <HeroSection />
       <AboutSection />
+      <CurvedCarousel />
       <FeaturesSection />
       <ProcessSection />
       <PortfolioSection />
