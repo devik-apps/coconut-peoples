@@ -59,7 +59,9 @@ export const CurvedCarousel = () => {
       "touches" in e ? (e as TouchEvent).touches[0].clientX : (e as MouseEvent).clientX;
     const currentX = Math.round(clientX);
 
-    if (xPosRef.current !== 0 && (e.buttons === 1 || "touches" in e)) {
+    const isMouseDown = e instanceof MouseEvent ? e.buttons === 1 : true;
+
+    if (xPosRef.current !== 0 && isMouseDown) {
       const diff = currentX - xPosRef.current;
       rotationY.set(rotationY.get() - diff * 0.4);
     }
