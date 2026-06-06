@@ -2,10 +2,9 @@ import {
   HeroSection,
   CurvedCarousel,
   AboutSection,
-  FeaturesSection,
-  ProcessSection,
-  PortfolioSection,
-  TestimonialsSection,
+  CollectionSection,
+  RecipesGallerySection,
+  RecipesSection,
   WhyChooseUsSection,
   NewsSection,
   CtaSection,
@@ -17,10 +16,9 @@ export function HomePage() {
       <HeroSection />
       <AboutSection />
       <CurvedCarousel />
-      <FeaturesSection />
-      <ProcessSection />
-      <PortfolioSection />
-      <TestimonialsSection />
+      <RecipesGallerySection />
+      <CollectionSection />
+      <RecipesSection />
       <WhyChooseUsSection />
       <NewsSection />
       <CtaSection />
