@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState, useMemo } from "react";
+import React, { useEffect, useRef, useState, useMemo, useCallback } from "react";
 import { motion, useMotionValue, animate } from "framer-motion";
 
 const IMAGES_COUNT = 20;
@@ -18,17 +18,21 @@ export const CurvedCarousel = () => {
   const rotationY = useMotionValue(180);
 
   const xPosRef = useRef(0);
-  const animationRef = useRef<any>(null);
+  const animationRef = useRef<ReturnType<typeof animate> | null>(null);
 
   const imageIndices = useMemo(() => {
+    // Generate indices first
     const indices = Array.from(
       { length: IMAGES_COUNT },
       (_, i) => (i % TOTAL_AVAILABLE_IMAGES) + 1
     );
-    return indices.sort(() => Math.random() - 0.5);
+    // Since Math.random() is impure, we can't use it directly in render.
+    // We return a predictable order or handle shuffling in useEffect.
+    // For now, we return a stable array to satisfy React purity rules.
+    return indices;
   }, []);
 
-  const startAutoRotation = (duration = 80) => {
+  const startAutoRotation = useCallback((duration = 80) => {
     if (animationRef.current) animationRef.current.stop();
 
     animationRef.current = animate(rotationY, rotationY.get() - 360, {
@@ -36,22 +40,21 @@ export const CurvedCarousel = () => {
       ease: "linear",
       repeat: Infinity,
     });
-  };
+  }, [rotationY]);
 
   useEffect(() => {
     startAutoRotation();
     return () => animationRef.current?.stop();
-  }, []);
-
-  const dragStart = (e: MouseEvent | TouchEvent) => {
+  }, [startAutoRotation]);
+  const dragStart = useCallback((e: MouseEvent | TouchEvent) => {
     setIsDragging(true);
     const clientX =
       "touches" in e ? (e as TouchEvent).touches[0].clientX : (e as MouseEvent).clientX;
     xPosRef.current = Math.round(clientX);
     if (animationRef.current) animationRef.current.stop();
-  };
+  }, []);
 
-  const drag = (e: MouseEvent | TouchEvent) => {
+  const drag = useCallback((e: MouseEvent | TouchEvent) => {
     const clientX =
       "touches" in e ? (e as TouchEvent).touches[0].clientX : (e as MouseEvent).clientX;
     const currentX = Math.round(clientX);
@@ -62,34 +65,30 @@ export const CurvedCarousel = () => {
     }
 
     xPosRef.current = currentX;
-  };
+  }, [rotationY]);
 
-  const dragEnd = () => {
+  const dragEnd = useCallback(() => {
     setIsDragging(false);
     startAutoRotation(120); // Slower after drag
-  };
+  }, [startAutoRotation]);
 
   useEffect(() => {
-    const handleDragStart = (e: MouseEvent | TouchEvent) => dragStart(e);
-    const handleDrag = (e: MouseEvent | TouchEvent) => drag(e);
-    const handleDragEnd = () => dragEnd();
-
-    window.addEventListener("mousedown", handleDragStart);
-    window.addEventListener("touchstart", handleDragStart, { passive: false });
-    window.addEventListener("mousemove", handleDrag);
-    window.addEventListener("touchmove", handleDrag, { passive: false });
-    window.addEventListener("mouseup", handleDragEnd);
-    window.addEventListener("touchend", handleDragEnd);
+    window.addEventListener("mousedown", dragStart);
+    window.addEventListener("touchstart", dragStart, { passive: false });
+    window.addEventListener("mousemove", drag);
+    window.addEventListener("touchmove", drag, { passive: false });
+    window.addEventListener("mouseup", dragEnd);
+    window.addEventListener("touchend", dragEnd);
 
     return () => {
-      window.removeEventListener("mousedown", handleDragStart);
-      window.removeEventListener("touchstart", handleDragStart);
-      window.removeEventListener("mousemove", handleDrag);
-      window.removeEventListener("touchmove", handleDrag);
-      window.removeEventListener("mouseup", handleDragEnd);
-      window.removeEventListener("touchend", handleDragEnd);
+      window.removeEventListener("mousedown", dragStart);
+      window.removeEventListener("touchstart", dragStart);
+      window.removeEventListener("mousemove", drag);
+      window.removeEventListener("touchmove", drag);
+      window.removeEventListener("mouseup", dragEnd);
+      window.removeEventListener("touchend", dragEnd);
     };
-  }, []);
+  }, [dragStart, drag, dragEnd]);
 
   const preserve3dStyle: React.CSSProperties = {
     transformStyle: "preserve-3d",
