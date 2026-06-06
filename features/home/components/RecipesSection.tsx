@@ -64,10 +64,6 @@ export function RecipesSection() {
           <h3 className="font-sans text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#234A23]">
             Inspirez-vous avec des recettes faciles à réaliser au quotidien
           </h3>
-          {/* <p className="font-serif text-xl md:text-2xl text-zinc-600 leading-relaxed px-4">
-            Plongez dans les détails de notre savoir-faire. Cliquez sur les cartes pour découvrir
-            les secrets de nos matériaux.
-          </p> */}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-4 md:gap-8 items-center justify-items-center">
@@ -77,11 +73,9 @@ export function RecipesSection() {
         </div>
 
         <div className="mt-16 flex justify-center">
-          <div className="inline-flex items-center gap-3 px-8 py-8 bg-white rounded-3xl shadow-[0_4px_15px_rgba(0,0,0,0.05)] border border-zinc-100 hover:shadow-[inset_0_2px_10px_rgba(0,0,0,0.08)] hover:bg-zinc-100/50 hover:border-white/40 transition-all duration-500 cursor-pointer group">
-            <span className="text-[10px] md:text-sm font-sans font-bold tracking-[0.3em] text-gray-700 group-hover:text-gray-600 transition-colors">
-              Cliquer pour retourner
-            </span>
-          </div>
+          <button className="px-8 py-4 font-sans text-lg text-black font-normal bg-gradient-to-b from-white to-slate-50 rounded-full transition-all duration-300 ease-in-out shadow-[0_8px_16px_rgba(0,0,0,0.06),_0_2px_4px_rgba(0,0,0,0.02)] hover:shadow-[inset_0_4px_12px_rgba(0,0,0,0.12),_inset_0_2px_4px_rgba(0,0,0,0.06)] hover:from-slate-100 hover:to-white cursor-pointer">
+            Cliquer pour retourner
+          </button>
         </div>
       </Container>
     </section>

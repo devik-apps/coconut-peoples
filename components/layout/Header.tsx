@@ -32,7 +32,7 @@ export function Header() {
   return (
     <header className="fixed top-0 z-50 w-full pt-6 md:pt-10 px-4 md:px-20 pointer-events-none">
       <Container className="pointer-events-auto">
-        <div className="flex h-20 items-center justify-between bg-white/90 backdrop-blur-md px-6 md:px-10">
+        <div className="flex h-20 items-center justify-between bg-white/90 ring-gray-300 ring-1 backdrop-blur-md px-6 md:px-10">
           <Link
             href="/"
             className="font-serif text-xl md:text-2xl font-medium tracking-tight text-zinc-950 shrink-0"
@@ -60,11 +60,7 @@ export function Header() {
               className="p-2 text-zinc-950 focus:outline-none"
               aria-label="Toggle Menu"
             >
-              {isOpen ? (
-                <X size={24} strokeWidth={1.5} />
-              ) : (
-                <Menu size={24} strokeWidth={1.5} />
-              )}
+              {isOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
             </button>
           </div>
         </div>

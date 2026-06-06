@@ -6,7 +6,7 @@ export function AboutSection() {
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
           <div className="font-sans text-5xl lg:text-6xl font-bold flex items-end h-full">
-            <h3 className="text-[#234A23]">
+            <h3 className="text-gray-900">
               Ce qu&apos;on croit <br /> vraiment.
             </h3>
           </div>
