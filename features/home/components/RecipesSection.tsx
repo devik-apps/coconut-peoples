@@ -1,0 +1,89 @@
+import { Container } from "@/components/layout/Container";
+import { InteractiveFlipCard } from "@/components/ui/InteractiveFlipCard";
+
+const INTERACTIVE_DATA = [
+  {
+    name: "Poulet au curry lait de coco",
+    img: "/assets/images/img_13.jpg",
+    ingredients: [
+      "500 g de poulet",
+      "1 oignon, 2 gousses d’ail",
+      "1 c. à café de curry",
+      "Sel, Poivre, Huile",
+      "1 petit morceau de gingembre",
+      "20 cl de lait de coco",
+    ],
+    preparation: [
+      "Faites revenir l’oignon, l’ail et le gingembre dans un peu d’huile.",
+      "Ajoutez le poulet et faites-le dorer.",
+      "Versez le lait de coco, ajoutez le curry, sel et poivre.",
+      "Laissez mijoter 20 à 25 minutes jusqu’à sauce onctueuse.",
+      "Servez avec du riz.",
+    ],
+  },
+  {
+    name: "Yaourt Coco",
+    img: "/assets/images/img_5.jpg",
+    ingredients: [
+      "2 yaourts nature",
+      "10 à 15 cl de lait de coco",
+      "2 à 3 c. à soupe de sucre",
+      "2 c. à soupe de noix de coco râpée",
+    ],
+    preparation: [
+      "Mélangez les yaourts avec le lait de coco et le sucre jusqu’à texture homogène.",
+      "Ajoutez la noix de coco râpée.",
+      "Placez au frais au moins 1 heure avant de servir.",
+    ],
+  },
+  {
+    name: "Ravitot au lait de Coco",
+    img: "/assets/images/img_12.jpg",
+    ingredients: [
+      "500 g de ravitoto (feuilles de manioc pilées)",
+      "300 g de viande de porc (ou bœuf)",
+      "1 oignon, 2 gousses d’ail",
+      "20 à 30 cl de lait de coco",
+      "Sel, poivre. Un peu d’huile",
+    ],
+    preparation: [
+      "Faites revenir l’oignon et l’ail dans l’huile, ajoutez la viande et laissez dorer.",
+      "Ajoutez le ravitoto, salez et poivrez, puis couvrez d’un peu d’eau et laissez cuire 30 à 40 minutes.",
+      "Versez le lait de coco en fin de cuisson et laissez mijoter encore 10 minutes.",
+    ],
+  },
+];
+
+export type Plate = (typeof INTERACTIVE_DATA)[number];
+
+export function RecipesSection() {
+  return (
+    <section className="section-padding bg-white overflow-hidden">
+      <Container>
+        <div className="mb-16 md:mb-24 text-center max-w-5xl mx-auto flex flex-col gap-4 items-center">
+          <h3 className="font-sans text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#234A23]">
+            Inspirez-vous avec des recettes faciles à réaliser au quotidien
+          </h3>
+          {/* <p className="font-serif text-xl md:text-2xl text-zinc-600 leading-relaxed px-4">
+            Plongez dans les détails de notre savoir-faire. Cliquez sur les cartes pour découvrir
+            les secrets de nos matériaux.
+          </p> */}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-4 md:gap-8 items-center justify-items-center">
+          {INTERACTIVE_DATA.map((item, index) => (
+            <InteractiveFlipCard key={index} category={item} />
+          ))}
+        </div>
+
+        <div className="mt-16 flex justify-center">
+          <div className="inline-flex items-center gap-3 px-8 py-8 bg-white rounded-3xl shadow-[0_4px_15px_rgba(0,0,0,0.05)] border border-zinc-100 hover:shadow-[inset_0_2px_10px_rgba(0,0,0,0.08)] hover:bg-zinc-100/50 hover:border-white/40 transition-all duration-500 cursor-pointer group">
+            <span className="text-[10px] md:text-sm font-sans font-bold tracking-[0.3em] text-gray-700 group-hover:text-gray-600 transition-colors">
+              Cliquer pour retourner
+            </span>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}

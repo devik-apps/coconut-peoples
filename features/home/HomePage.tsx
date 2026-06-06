@@ -3,12 +3,10 @@ import {
   CurvedCarousel,
   AboutSection,
   CollectionSection,
-  ProcessSection,
-  PortfolioSection,
-  TestimonialsSection,
   WhyChooseUsSection,
   NewsSection,
   CtaSection,
+  RecipesSection,
 } from "./components";
 
 export function HomePage() {
@@ -17,6 +15,7 @@ export function HomePage() {
       <HeroSection />
       <AboutSection />
       <CurvedCarousel />
+      <RecipesSection />
       <CollectionSection />
       <WhyChooseUsSection />
       <NewsSection />
