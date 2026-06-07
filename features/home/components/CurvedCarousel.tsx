@@ -121,7 +121,7 @@ export const CurvedCarousel = () => {
               rotateY: rotationY,
               cursor: isDragging ? "grabbing" : "grab",
             }}
-            className="ring relative w-full h-full"
+            className="relative w-full h-full"
           >
             {imageIndices.map((imgIndex, i) => (
               <motion.div
